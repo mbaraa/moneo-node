@@ -9,8 +9,8 @@ FROM alpine:latest AS run
 
 WORKDIR /app
 
-COPY --from=build /app/linuxipsum ./linuxipsum
+COPY --from=build /app/monero-node ./monero-node
 
 EXPOSE 80
 
-CMD ["./linuxipsum"]
+CMD ["./monero-node"]
