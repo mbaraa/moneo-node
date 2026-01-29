@@ -177,6 +177,12 @@ section {
   text-transform: capitalize;
 }
 
+.wallet-address {
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .copy-button {
   background-color: #232323;
   color: #fff;

@@ -80,6 +80,7 @@
                   font-size: 18px;
                   cursor: pointer;
                 "
+                onclick="copyToClipboard('node.monero.mbaraa.com')"
                 title="copy to clipboard"
                 >node.monero.mbaraa.com:443</code
               >
@@ -180,7 +181,10 @@
           </p>
           <p>Please help keep this node running by donating Monero:</p>
           <div class="text-center">
-            <code style="color: #fff; font-size: 18px" title="copy to clipboard"
+            <code
+              onclick="copyWalletAddress()"
+              class="wallet-address"
+              title="copy to clipboard"
               >42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz</code
             >
             <br />
@@ -215,8 +219,8 @@
           <div>
             XMR:
             <code
-              id="wallet-address"
-              style="color: white; font-size: 16px"
+              onclick="copyWalletAddress()"
+              class="wallet-address"
               title="copy to clipboard"
               >42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz</code
             >
@@ -253,19 +257,11 @@
         });
       }
 
-      document.getElementById("copy-button").addEventListener("click", () => {
+      function copyWalletAddress() {
         copyToClipboard(
           "42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz",
         );
-      });
-
-      document
-        .getElementById("wallet-address")
-        .addEventListener("click", () => {
-          copyToClipboard(
-            "42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz",
-          );
-        });
+      }
 
       updateStatus();
     </script>
