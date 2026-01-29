@@ -5,40 +5,76 @@ div {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #fff;
+}
+
 body {
   font-family: "Terminus";
   background-color: #000000;
   color: #20db8f;
   margin: 0;
   padding: 0;
+  min-height: 100dvh;
+}
+
+* {
+  font-size: 1.1rem;
+}
+
+header {
+  /* width: 100%; */
+  text-align: center;
+  background-color: #222;
 }
 
 /* components specific styles */
 
-main {
-  min-height: 100dvh;
-}
-
-header {
+.container {
   width: 100%;
-  text-align: center;
-  background-color: #222;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1233px;
+  }
 }
 
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  padding: 20px;
+  padding-top: 30px;
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
 }
 
 .title-sub {
-  font-size: 1.5rem;
-  padding: 5px;
+  font-size: 1rem;
+  padding: 10px;
   margin: 0;
-  font-style: italic;
   word-break: break-word;
 }
 
@@ -57,13 +93,20 @@ header {
 
 */
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 100%;
+@media screen and (min-width: 1300px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .nav-links {
@@ -86,7 +129,7 @@ header {
 .nav-links li a {
   display: inline-block;
   width: 100%;
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 1.07rem 1rem;
   transition: background-color 0.3s ease;
@@ -106,30 +149,82 @@ section {
   padding-bottom: 60px;
 }
 
-.footer {
-  margin: 0;
-  height: 200px;
+.section-title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.section-body {
+}
+
+.section-body h3 {
+  color: #fff;
+}
+
+.online {
+  color: #28a745;
+}
+
+.offline {
+  color: #fd2a00;
+}
+
+.syncing {
+  color: #ff4a13;
+}
+
+#monerod-status {
+  text-transform: capitalize;
+}
+
+.copy-button {
+  background-color: #232323;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#footer {
   background-color: #212121;
-  color: #ffffff;
-}
-
-p.footer {
-  font-size: 1.25rem;
+  color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  overflow-wrap: break-word;
   width: 100%;
-  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-span.footer {
+#footer .footer-left {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin-left: 30px;
 }
 
-img.footer {
-  width: 30px;
-  height: 30px;
-  margin-left: 5px;
+#footer .footer-left code {
+  overflow-wrap: break-word;
+}
+
+#footer .footer-left button {
+}
+
+#footer .footer-right {
+  margin-right: 30px;
+}
+
+#footer .footer-right a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+#footer .footer-right a:hover {
+  text-decoration: none;
 }
 
 /* fonts */

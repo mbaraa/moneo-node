@@ -9,7 +9,7 @@
     />
     <meta
       name="description"
-      content="Baraa's very cool monero node, a secure and lightweight remote connection for your wallet. Connect your wallet and use for free"
+      content="Baraa's very cool monero node, a secure remote connection for your wallet. Connect your wallet and use for free"
     />
     <meta
       name="keywords"
@@ -18,7 +18,7 @@
     <meta name="og:title" content="Baraa's Moneo Node" />
     <meta
       name="og:description"
-      content="Baraa's very cool monero node, a secure and lightweight remote connection for your wallet. Connect your wallet and use for free"
+      content="Baraa's very cool monero node, a secure remote connection for your wallet. Connect your wallet and use for free"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://monero.mbaraa.com/" />
@@ -30,92 +30,244 @@
     <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <h1 class="title">Baraa's Monero Node</h1>
-        <p class="title-sub">
-          Baraa's very cool monero node, a secure and lightweight remote
-          connection for your wallet. Connect your wallet and use for free.
-        </p>
-        <nav class="navbar">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#status">Status</a></li>
-            <li><a href="#maintenance">Maintenance</a></li>
-            <li><a href="#help">Help</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#support">Support</a></li>
-            <li><a href="#feedback-form">Feedback</a></li>
+    <header>
+      <h1 class="title">Baraa's Monero Node</h1>
+      <p class="title-sub">
+        Baraa's very cool monero node, a secure remote connection for your
+        wallet. Connect your wallet and use for free.
+      </p>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#status">Status</a></li>
+          <li><a href="#maintenance">Maintenance</a></li>
+          <li><a href="#help">Help</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="about">
+        <h2 class="section-title">About</h2>
+        <div class="section-body">
+          <p>
+            Monero is more than a cryptocurrency - it's a movement for privacy
+            and financial freedom. By using this Monero remote node, you're
+            getting lightweight access to a decentralized network that values
+            your anonymity and independence.
+          </p>
+          <p>
+            This website does not use any ads or tracking. It depends on your
+            support to stay online. Please consider supporting it
+            <a href="#support" style="color: #fff">here (Support section)</a>.
+            Thank you!
+          </p>
+        </div>
+      </section>
+
+      <section id="status">
+        <h2 class="section-title">Node Status</h2>
+        <div class="section-body">
+          <ul>
+            <li>
+              MoneroD:
+              <code
+                style="
+                  color: rgb(169, 169, 169);
+                  font-size: 18px;
+                  cursor: pointer;
+                "
+                title="copy to clipboard"
+                >node.monero.mbaraa.com:443</code
+              >
+              <span id="monerod-status" class="online">online</span>
+            </li>
           </ul>
-        </nav>
-      </header>
+        </div>
+      </section>
 
-      <section class="lorem-container">
-        <p class="lorem-text">
-          What you guys are referring to as Linux, is in fact, GNU/Linux, or as
-          I've recently taken to calling it, GNU plus Linux. Linux is not an
-          operating system unto itself, but rather another free component of a
-          fully functioning GNU system made useful by the GNU corelibs, shell
-          utilities and vital system components comprising a full OS as defined
-          by POSIX. Many computer users run a modified version of the GNU system
-          every day, without realizing it. Through a peculiar turn of events,
-          the version of GNU which is widely used today is often called "Linux",
-          and many of its users are not aware that it is basically the GNU
-          system, developed by the GNU Project. There really is a Linux, and
-          these people are using it, but it is just a part of the system they
-          use. Linux is the kernel: the program in the system that allocates the
-          machine's resources to the other programs that you run. The kernel is
-          an essential part of an operating system, but useless by itself; it
-          can only function in the context of a complete operating system. Linux
-          is normally used in combination with the GNU operating system: the
-          whole system is basically GNU with Linux added, or GNU/Linux. All the
-          so-called "Linux" distributions are really distributions of GNU/Linux.
-        </p>
+      <section id="maintenance">
+        <h2 class="section-title">Scheduled Maintenance</h2>
+        <div class="section-body">
+          Not for a long time, I just pumped up my server, it'll need a while
+          before needing a new upgrade!
+        </div>
+      </section>
 
-        <div class="lorem-generator">
-          <h3 class="lorem-generator-title">Lorem Generator</h3>
-          <form action="#" id="lorem-form" class="lorem-form">
-            <label class="lorem-form-item" for="type">Type: </label>
-            <select class="lorem-form-item" id="type">
-              <option selected value="paragraph">Paragraphs</option>
-              <option value="words">Words</option>
-            </select>
-            <label class="lorem-form-item" for="quantity">Quantity: </label>
-            <input
-              class="lorem-form-item"
-              id="quantity"
-              type="number"
-              name="quantity"
-              value="1"
-            />
+      <section id="help">
+        <h2 class="section-title">Help</h2>
+        <div class="section-body">
+          <h3>Usage with monero-wallet</h3>
+          <ol>
+            <li>
+              Download the wallet
+              <a
+                href="https://www.getmonero.org/downloads/"
+                target="_blank"
+                style="color: #a9a9a9"
+                >Monero GUI/CLI</a
+              >
+            </li>
+            <li>
+              In the wallet, go to Settings - Node - "Remote Node" - add remote
+              node.
+            </li>
+            <li>
+              Enter the following address as the remote node:
+              <code
+                style="
+                  color: rgb(169, 169, 169);
+                  font-size: 18px;
+                  cursor: pointer;
+                "
+                onclick="copyToClipboard('https://node.monero.mbaraa.com')"
+                title="copy to clipboard"
+                >https://node.monero.mbaraa.com</code
+              >.
+            </li>
+            <li>
+              Use this port:
+              <code
+                style="
+                  color: rgb(169, 169, 169);
+                  font-size: 18px;
+                  cursor: pointer;
+                "
+                onclick="copyToClipboard('443')"
+                title="copy to clipboard"
+                >443</code
+              >.
+            </li>
+            <li>Go back to Node and click on the address.</li>
+          </ol>
+        </div>
+      </section>
 
-            <input class="lorem-form-button" type="submit" value="Generate" />
-          </form>
+      <section id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="section-body">
+          <h3>Who needs this node?</h3>
+          <p>
+            Anyone who wants to make a quick Monero transaction without needing
+            to sync the entire blockchain on your device.
+          </p>
+          <h3>Is this safe? Can I trust you?</h3>
+          <p>
+            While using your own node is always the safest option, however, as
+            you know running a Monero node isn't cheap, so if I wanted to run a
+            scam I would've picked something cheaper to run and maintain, I
+            initially did it when I was moving around without my main computer
+            in hand and then I was like &OpenCurlyDoubleQuote;Hmm what if
+            someone else can also use this in cases like mine&CloseCurlyQuote;.
+          </p>
+          <h3>
+            Is this website a copy of
+            <a href="https://monero-node.com/">monero-node.com</a>?
+          </h3>
+          <p>Yes, because why not, same purpose same service.</p>
+        </div>
+      </section>
 
-          <p id="lorem-generated"></p>
+      <section id="support">
+        <h2 class="section-title">Support This Node</h2>
+        <div class="section-body">
+          <p>
+            This website does not use any ads or third-party tracking, and is
+            dependent on your support!
+          </p>
+          <p>Please help keep this node running by donating Monero:</p>
+          <div class="text-center">
+            <code style="color: #fff; font-size: 18px" title="copy to clipboard"
+              >42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz</code
+            >
+            <br />
+            <button id="copy-button" class="copy-button">
+              Copy to Clipboard
+            </button>
+            <p>Thank you!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-body contact">
+          <ul>
+            <li>
+              Email: <a href="mailto:monero@mbaraa.com">monero@mbaraa.com</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/mbaraa">@mbaraa</a></li>
+            <li>
+              Twitter: <a href="https://twitter.com/0xmbaraa">@0xmbaraa</a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <footer id="footer" class="footer">
-      <p class="footer">
-        <span class="footer">
-          Made with 🧉 by&nbsp;
-          <a title="Baraa Al-Masri" href="https://mbaraa.com">
-            <img
-              class="footer"
-              height="30"
-              width="30"
-              src="https://mbaraa.com/resources/images/favicon.png"
-            />
-          </a>
-          &nbsp;&comma;&nbsp;&nbsp;
-          <a title="Star it!" href="https://github.com/mbaraa/monero-node">
-            Star it!
-          </a>
-        </span>
-      </p>
+    <footer id="footer">
+      <div class="footer-left">
+        <div>
+          <strong>Support This Node!</strong>
+          <div>
+            XMR:
+            <code
+              id="wallet-address"
+              style="color: white; font-size: 16px"
+              title="copy to clipboard"
+              >42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz</code
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/mbaraa/monero-node"
+          >monero.mbaraa.com © 2026</a
+        >
+      </div>
     </footer>
+
+    <script>
+      async function updateStatus() {
+        try {
+          const response = await fetch("/healthcheck");
+          const data = await response.json();
+          document.getElementById("monerod-status").textContent = data.monerod;
+          document.getElementById("monerod-status").classList.add(data.monerod);
+        } catch (error) {
+          document.getElementById("monerod-status").textContent = "Offline";
+          document.getElementById("monerod-status").classList.add("offline");
+        }
+      }
+
+      function copyToClipboard(text) {
+        if (!navigator) {
+          alert("Your browser doesn't support clipboard!");
+          return;
+        }
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Copied to clipboard!");
+        });
+      }
+
+      document.getElementById("copy-button").addEventListener("click", () => {
+        copyToClipboard(
+          "42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz",
+        );
+      });
+
+      document
+        .getElementById("wallet-address")
+        .addEventListener("click", () => {
+          copyToClipboard(
+            "42BenUPb4LR9KpwkDAbcDqHiioeFWtPgBcTRY1jUFo6QHQLhHAfPeSHcMDFYdB3fBVijk5b7BdQSe1cVNMSSBKXsAHm4oUz",
+          );
+        });
+
+      updateStatus();
+    </script>
   </body>
 </html>

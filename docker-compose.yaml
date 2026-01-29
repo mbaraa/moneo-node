@@ -8,6 +8,8 @@ services:
     ports:
       - "26291:3000"
     stdin_open: true
+    networks:
+      - monero-node-network
 
   monero-node-monerod:
     container_name: "monero-node-monerod"
@@ -24,6 +26,11 @@ services:
     volumes:
       - monerod-blockchain:/var/lib/monero
       - monerod-logs:/var/log/monero
+    networks:
+      - monero-node-network
+
+networks:
+  monero-node-network: {}
 
 volumes:
   monerod-blockchain:

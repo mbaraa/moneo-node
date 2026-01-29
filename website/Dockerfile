@@ -3,7 +3,7 @@ FROM golang:1.22-alpine AS build
 WORKDIR /app
 COPY . .
 
-RUN go build -ldflags="-w -s"
+RUN go build -ldflags="-w -s" -o monero-node
 
 FROM alpine:latest AS run
 
