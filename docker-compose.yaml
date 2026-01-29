@@ -1,0 +1,41 @@
+services:
+  website:
+    container_name: "website"
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+    restart: "always"
+    ports:
+      - "26291:3000"
+    stdin_open: true
+
+  node:
+    container_name: "node"
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    restart: "always"
+    ports:
+      - "18080:18080"
+      - "18081:18081"
+      - "18083:18083"
+      - "18089:18089"
+    stdin_open: true
+    volumes:
+      - node-blockchain:/var/lib/monero
+      - node-logs:/var/log/monero
+
+volumes:
+  node-blockchain:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./.blockchain
+
+  node-logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./.logs
