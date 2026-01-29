@@ -1,6 +1,6 @@
 # monero-node
 
-<a href="https://github.com/mbaraa/monero-node/actions/workflows/rex-deploy.yml"><img alt="rex-deployment" src="https://github.com/mbaraa/monero-node/actions/workflows/rex-deploy.yml/badge.svg"/></a>
+<a href="https://github.com/mbaraa/monero-node/actions/workflows/rex-deployment.yml"><img alt="rex-deployment" src="https://github.com/mbaraa/monero-node/actions/workflows/rex-deployment.yml/badge.svg"/></a>
 
 ---
 
